@@ -98,12 +98,16 @@ fun NoteEditScreen(
                 actions = {
                     IconButton(
                         onClick = {
+                            val shareText = if (title.isNotBlank()) "$title\n\n$content" else content
                             val sendIntent = Intent(Intent.ACTION_SEND).apply {
                                 type = "text/plain"
                                 putExtra(Intent.EXTRA_SUBJECT, title)
-                                putExtra(Intent.EXTRA_TEXT, if (title.isNotBlank()) "$title\n\n$content" else content)
+                                putExtra(Intent.EXTRA_TEXT, shareText)
                             }
-                            context.startActivity(Intent.createChooser(sendIntent, null))
+                            val chooserIntent = Intent.createChooser(sendIntent, null).apply {
+                                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                            }
+                            context.startActivity(chooserIntent)
                         },
                         enabled = title.isNotBlank() || content.isNotBlank()
                     ) {

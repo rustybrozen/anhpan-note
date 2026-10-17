@@ -14,6 +14,12 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
+enum class CloudSyncState {
+    SYNCED,
+    OFFLINE,
+    SERVER_ERROR
+}
+
 class NoteViewModel(
     private val repository: NoteRepository,
     private val userPreferences: UserPreferences
@@ -72,6 +78,9 @@ class NoteViewModel(
     private val _isSyncing = MutableStateFlow(false)
     val isSyncing: StateFlow<Boolean> = _isSyncing.asStateFlow()
 
+    private val _syncState = MutableStateFlow(CloudSyncState.SYNCED)
+    val syncState: StateFlow<CloudSyncState> = _syncState.asStateFlow()
+
     private val _isAuthLoading = MutableStateFlow(false)
     val isAuthLoading: StateFlow<Boolean> = _isAuthLoading.asStateFlow()
 
@@ -79,10 +88,8 @@ class NoteViewModel(
     val authError: StateFlow<String?> = _authError.asStateFlow()
 
     init {
-        viewModelScope.launch {
-            if (isAutoSync.value && !userId.value.isNullOrBlank()) {
-                syncNotes()
-            }
+        if (isAutoSync.value && !userId.value.isNullOrBlank()) {
+            syncNotes()
         }
     }
 
@@ -182,12 +189,40 @@ class NoteViewModel(
             _isSyncing.value = true
             try {
                 repository.syncAllNotes(currentUid)
+                _syncState.value = CloudSyncState.SYNCED
             } catch (e: Exception) {
-                // Keep local changes intact when offline or network fails
+                _syncState.value = if (isOfflineError(e)) {
+                    CloudSyncState.OFFLINE
+                } else {
+                    CloudSyncState.SERVER_ERROR
+                }
             } finally {
                 _isSyncing.value = false
             }
         }
+    }
+
+
+
+
+    private fun isOfflineError(e: Throwable): Boolean {
+        var current: Throwable? = e
+        while (current != null) {
+            val name = current::class.java.simpleName
+            val msg = current.message?.lowercase() ?: ""
+            if (name.contains("UnknownHost", ignoreCase = true) ||
+                name.contains("SocketTimeout", ignoreCase = true) ||
+                name.contains("ConnectException", ignoreCase = true) ||
+                name.contains("UnresolvedAddress", ignoreCase = true) ||
+                msg.contains("no address associated", ignoreCase = true) ||
+                msg.contains("unreachable", ignoreCase = true) ||
+                msg.contains("failed to connect", ignoreCase = true)
+            ) {
+                return true
+            }
+            current = current.cause
+        }
+        return false
     }
 
 

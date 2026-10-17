@@ -38,6 +38,8 @@
     <string name="cd_note_unsynced">Unsynchronized note</string>
     <string name="sync_status_synced">All notes synchronized</string>
     <string name="sync_status_syncing">Synchronizing...</string>
+    <string name="sync_status_offline">Offline - Sync paused</string>
+    <string name="sync_status_server_error">Cloud error - Tap to retry</string>
 
     <!-- Note Edit Screen -->
     <string name="note_new_title">New Note</string>
@@ -75,8 +77,10 @@
     <!-- About Screen -->
     <string name="about_title">About Application</string>
     <string name="about_app_name">AnhPan Note</string>
-    <string name="about_app_version">Version 1.0.0</string>
+    <string name="about_app_version">Version 1.0.1</string>
     <string name="about_changelog_title">Changelog</string>
+    <string name="about_changelog_v101_title">Version 1.0.1</string>
+    <string name="about_changelog_v101_desc">• Smart cloud status indicator\n• Easy note sharing\n• Smoother user experience</string>
     <string name="about_changelog_v100_title">Version 1.0.0 - Official Release</string>
 
     <!-- Authentication Dialog -->

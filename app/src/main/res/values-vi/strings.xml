@@ -38,6 +38,8 @@
     <string name="cd_note_unsynced">Ghi chú chưa đồng bộ</string>
     <string name="sync_status_synced">Đã đồng bộ toàn bộ ghi chú</string>
     <string name="sync_status_syncing">Đang đồng bộ...</string>
+    <string name="sync_status_offline">Ngoại tuyến - Tạm dừng đồng bộ</string>
+    <string name="sync_status_server_error">Lỗi đám mây - Chạm để thử lại</string>
 
     <!-- Màn hình Soạn thảo Ghi chú -->
     <string name="note_new_title">Ghi chú mới</string>
@@ -75,8 +77,10 @@
     <!-- Thông tin ứng dụng -->
     <string name="about_title">Thông tin ứng dụng</string>
     <string name="about_app_name">AnhPan Note</string>
-    <string name="about_app_version">Phiên bản 1.0.0</string>
+    <string name="about_app_version">Phiên bản 1.0.1</string>
     <string name="about_changelog_title">Nhật ký cập nhật</string>
+    <string name="about_changelog_v101_title">Phiên bản 1.0.1</string>
+    <string name="about_changelog_v101_desc">• Thêm biểu tượng trạng thái đám mây thông minh\n• Chia sẻ ghi chú nhanh chóng\n• Cải thiện giao diện và trải nghiệm</string>
     <string name="about_changelog_v100_title">Phiên bản 1.0.0 - Phát hành chính thức</string>
 
     <!-- Hộp thoại xác thực tài khoản -->

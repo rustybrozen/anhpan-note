@@ -101,9 +101,24 @@ fun AboutScreen(
                     )
 
                     Text(
-                        text = stringResource(R.string.about_changelog_v100_title),
-                        style = MaterialTheme.typography.bodyLarge,
+                        text = stringResource(R.string.about_changelog_v101_title),
+                        style = MaterialTheme.typography.titleSmall,
+                        fontWeight = FontWeight.SemiBold,
                         color = MaterialTheme.colorScheme.onSurface
+                    )
+
+                    Text(
+                        text = stringResource(R.string.about_changelog_v101_desc),
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+
+                    Spacer(modifier = Modifier.height(4.dp))
+
+                    Text(
+                        text = stringResource(R.string.about_changelog_v100_title),
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.outline
                     )
                 }
             }

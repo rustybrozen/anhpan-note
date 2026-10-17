@@ -63,6 +63,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.example.anhpannt.R
 import com.example.anhpannt.data.Note
+import com.example.anhpannt.ui.CloudSyncState
 import com.example.anhpannt.ui.NoteViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -75,6 +76,7 @@ fun NoteListScreen(
 ) {
     val notes by viewModel.notes.collectAsState()
     val isSyncing by viewModel.isSyncing.collectAsState()
+    val syncState by viewModel.syncState.collectAsState()
     val isLoggedIn by viewModel.isLoggedIn.collectAsState()
     val isAuthLoading by viewModel.isAuthLoading.collectAsState()
     val authError by viewModel.authError.collectAsState()
@@ -177,7 +179,7 @@ fun NoteListScreen(
                             ) {
                                 if (!isLoggedIn) {
                                     Icon(
-                                        painter = painterResource(id = R.drawable.ic_cloud_off),
+                                        painter = painterResource(id = R.drawable.ic_cloud_lock),
                                         contentDescription = stringResource(R.string.auth_prompt_sign_in_to_sync),
                                         modifier = Modifier.size(24.dp),
                                         tint = MaterialTheme.colorScheme.outline
@@ -190,6 +192,20 @@ fun NoteListScreen(
                                             .size(24.dp)
                                             .rotate(rotationAngle),
                                         tint = MaterialTheme.colorScheme.primary
+                                    )
+                                } else if (syncState == CloudSyncState.OFFLINE) {
+                                    Icon(
+                                        painter = painterResource(id = R.drawable.ic_cloud_pause),
+                                        contentDescription = stringResource(R.string.sync_status_offline),
+                                        modifier = Modifier.size(24.dp),
+                                        tint = Color(0xFFF57C00)
+                                    )
+                                } else if (syncState == CloudSyncState.SERVER_ERROR) {
+                                    Icon(
+                                        painter = painterResource(id = R.drawable.ic_cloud_warning),
+                                        contentDescription = stringResource(R.string.sync_status_server_error),
+                                        modifier = Modifier.size(24.dp),
+                                        tint = MaterialTheme.colorScheme.error
                                     )
                                 } else {
                                     Icon(
@@ -269,6 +285,7 @@ fun NoteListScreen(
                             note = note,
                             isSelected = isSelected,
                             isSelectionMode = isSelectionMode,
+                            isCloudEnabled = isLoggedIn,
                             onClick = {
                                 if (isSelectionMode) {
                                     if (isSelected) {
@@ -347,6 +364,7 @@ private fun NoteItemCard(
     note: Note,
     isSelected: Boolean,
     isSelectionMode: Boolean,
+    isCloudEnabled: Boolean,
     onClick: () -> Unit,
     onLongClick: () -> Unit,
     modifier: Modifier = Modifier
@@ -413,7 +431,7 @@ private fun NoteItemCard(
                         color = MaterialTheme.colorScheme.outline
                     )
 
-                    if (!note.isSynced) {
+                    if (isCloudEnabled && !note.isSynced) {
                         Icon(
                             painter = painterResource(id = R.drawable.ic_cloud_off),
                             contentDescription = stringResource(R.string.cd_note_unsynced),
