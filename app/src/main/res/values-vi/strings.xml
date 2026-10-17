@@ -1,0 +1,98 @@
+<resources>
+    <string name="app_name">AnhPan Note</string>
+
+    <!-- Thao tác chung -->
+    <string name="action_cancel">Hủy</string>
+    <string name="action_back">Quay lại</string>
+    <string name="action_delete">Xóa</string>
+    <string name="action_save">Lưu</string>
+    <string name="action_save_and_exit">Lưu và thoát</string>
+    <string name="action_discard">Bỏ qua</string>
+    <string name="action_select_all">Chọn tất cả</string>
+    <string name="action_share">Chia sẻ</string>
+    <string name="cd_share_note">Chia sẻ ghi chú</string>
+
+    <!-- Màn hình Giới thiệu ban đầu -->
+    <string name="onboarding_title">Chào mừng đến với AnhPan Note</string>
+    <string name="onboarding_subtitle">Lưu giữ và sắp xếp mọi ý tưởng của bạn, truy cập mọi lúc mọi nơi trên các thiết bị.</string>
+    <string name="onboarding_feature_offline_title">Lưu trữ ngoại tuyến</string>
+    <string name="onboarding_feature_offline_desc">Mọi ghi chú được lưu tức thì trong thiết bị, truy cập mọi lúc mọi nơi kể cả khi không có mạng.</string>
+    <string name="onboarding_feature_cloud_title">Đồng bộ đám mây</string>
+    <string name="onboarding_feature_cloud_desc">Tự động đồng bộ hai chiều an toàn ngay khi thiết bị có kết nối mạng trở lại.</string>
+    <string name="onboarding_feature_settings_title">Cá nhân hóa ứng dụng</string>
+    <string name="onboarding_feature_settings_desc">Ghi nhớ giao diện yêu thích, chế độ đồng bộ và thiết lập riêng tư của bạn.</string>
+    <string name="onboarding_btn_start">Bắt đầu ngay</string>
+
+    <!-- Màn hình Danh sách Ghi chú -->
+    <string name="notes_title">Ghi chú của tôi</string>
+    <string name="notes_search_placeholder">Tìm kiếm ghi chú...</string>
+    <string name="notes_empty">Không có ghi chú nào</string>
+    <string name="notes_selected_count">Đã chọn %1$d</string>
+    <string name="notes_delete_confirm_title">Xác nhận xóa</string>
+    <string name="notes_delete_confirm_message">Bạn có chắc chắn muốn xóa %1$d ghi chú đã chọn không?</string>
+    <string name="cd_add_note">Thêm ghi chú mới</string>
+    <string name="cd_sync">Đồng bộ ghi chú</string>
+    <string name="cd_settings">Cài đặt</string>
+    <string name="cd_unselect">Bỏ chọn</string>
+    <string name="cd_delete_selected">Xóa ghi chú đã chọn</string>
+    <string name="cd_note_unsynced">Ghi chú chưa đồng bộ</string>
+    <string name="sync_status_synced">Đã đồng bộ toàn bộ ghi chú</string>
+    <string name="sync_status_syncing">Đang đồng bộ...</string>
+
+    <!-- Màn hình Soạn thảo Ghi chú -->
+    <string name="note_new_title">Ghi chú mới</string>
+    <string name="note_edit_title">Sửa ghi chú</string>
+    <string name="note_title_placeholder">Tiêu đề ghi chú</string>
+    <string name="note_content_placeholder">Viết nội dung ghi chú tại đây...</string>
+    <string name="note_unsaved_dialog_title">Lưu thay đổi?</string>
+    <string name="note_unsaved_dialog_message">Ghi chú của bạn có thay đổi chưa được lưu. Bạn có muốn lưu lại trước khi thoát không?</string>
+    <string name="cd_save_note">Lưu ghi chú</string>
+
+    <!-- Màn hình Cài đặt -->
+    <string name="settings_title">Cài đặt</string>
+    <string name="settings_section_cloud">Đồng bộ Đám mây</string>
+    <string name="settings_user_logged_in">Đã đăng nhập</string>
+    <string name="settings_user_not_logged_in">Chưa đăng nhập</string>
+    <string name="settings_status_connected">Trạng thái: Đã kết nối Đám mây</string>
+    <string name="settings_status_disconnected">Đăng nhập để đồng bộ ghi chú</string>
+    <string name="settings_last_sync">Đồng bộ lần cuối: %1$s</string>
+    <string name="settings_sync_just_now">Vừa xong</string>
+    <string name="settings_btn_sync_now">Đồng bộ ngay</string>
+    <string name="settings_btn_sign_in">Đăng nhập</string>
+    <string name="settings_btn_sign_out">Đăng xuất</string>
+    <string name="settings_section_preferences">Cài đặt Ứng dụng</string>
+    <string name="settings_auto_sync_title">Tự động đồng bộ khi có mạng</string>
+    <string name="settings_auto_sync_subtitle">Tự động lưu trữ dữ liệu lên đám mây khi có kết nối internet</string>
+    <string name="settings_language_title">Ngôn ngữ ứng dụng</string>
+    <string name="settings_language_subtitle">Chọn ngôn ngữ hiển thị</string>
+    <string name="language_en">English</string>
+    <string name="language_vi">Tiếng Việt</string>
+    <string name="dialog_select_language">Chọn ngôn ngữ</string>
+    <string name="settings_section_system">Hệ thống</string>
+    <string name="settings_about_app">Thông tin ứng dụng</string>
+    <string name="settings_about_app_subtitle">Thông tin ứng dụng và nhật ký cập nhật phiên bản</string>
+
+    <!-- Thông tin ứng dụng -->
+    <string name="about_title">Thông tin ứng dụng</string>
+    <string name="about_app_name">AnhPan Note</string>
+    <string name="about_app_version">Phiên bản 1.0.0</string>
+    <string name="about_changelog_title">Nhật ký cập nhật</string>
+    <string name="about_changelog_v100_title">Phiên bản 1.0.0 - Phát hành chính thức</string>
+
+    <!-- Hộp thoại xác thực tài khoản -->
+    <string name="auth_dialog_title">Tài khoản Đám mây</string>
+    <string name="auth_dialog_subtitle">Đăng nhập để đồng bộ ghi chú an toàn trên mọi thiết bị.</string>
+    <string name="auth_tab_sign_in">Đăng nhập</string>
+    <string name="auth_tab_sign_up">Đăng ký</string>
+    <string name="auth_email_label">Email</string>
+    <string name="auth_email_placeholder">email.cua.ban@gmail.com</string>
+    <string name="auth_password_label">Mật khẩu</string>
+    <string name="auth_password_placeholder">Tối thiểu 6 ký tự</string>
+    <string name="auth_btn_submit_sign_in">Đăng nhập</string>
+    <string name="auth_btn_submit_sign_up">Tạo tài khoản</string>
+    <string name="auth_btn_later">Dùng ngoại tuyến</string>
+    <string name="auth_error_empty">Vui lòng nhập đầy đủ email và mật khẩu.</string>
+    <string name="auth_error_short_password">Mật khẩu phải có ít nhất 6 ký tự.</string>
+    <string name="auth_error_failed">Xác thực thất bại. Vui lòng kiểm tra lại mạng và thông tin đăng nhập.</string>
+    <string name="auth_prompt_sign_in_to_sync">Vui lòng đăng nhập để đồng bộ ghi chú lên đám mây.</string>
+</resources>

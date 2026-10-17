@@ -1,0 +1,98 @@
+<resources>
+    <string name="app_name">AnhPan Note</string>
+
+    <!-- Common Actions -->
+    <string name="action_cancel">Cancel</string>
+    <string name="action_back">Back</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_save">Save</string>
+    <string name="action_save_and_exit">Save and exit</string>
+    <string name="action_discard">Discard</string>
+    <string name="action_select_all">Select all</string>
+    <string name="action_share">Share</string>
+    <string name="cd_share_note">Share note</string>
+
+    <!-- Onboarding Screen -->
+    <string name="onboarding_title">Welcome to AnhPan Note</string>
+    <string name="onboarding_subtitle">Keep your thoughts organized and accessible across all your devices.</string>
+    <string name="onboarding_feature_offline_title">Offline Storage</string>
+    <string name="onboarding_feature_offline_desc">All your notes are saved immediately on your device, accessible anytime without an internet connection.</string>
+    <string name="onboarding_feature_cloud_title">Cloud Synchronization</string>
+    <string name="onboarding_feature_cloud_desc">Automatic two-way sync keeps your notes safe and updated as soon as you reconnect to the network.</string>
+    <string name="onboarding_feature_settings_title">User Preferences</string>
+    <string name="onboarding_feature_settings_desc">Remember your favorite theme, sync preferences, and custom settings effortlessly.</string>
+    <string name="onboarding_btn_start">Get Started</string>
+
+    <!-- Note List Screen -->
+    <string name="notes_title">My Notes</string>
+    <string name="notes_search_placeholder">Search notes...</string>
+    <string name="notes_empty">No notes found</string>
+    <string name="notes_selected_count">Selected %1$d</string>
+    <string name="notes_delete_confirm_title">Confirm Deletion</string>
+    <string name="notes_delete_confirm_message">Are you sure you want to delete %1$d selected notes?</string>
+    <string name="cd_add_note">Add new note</string>
+    <string name="cd_sync">Synchronize notes</string>
+    <string name="cd_settings">Settings</string>
+    <string name="cd_unselect">Cancel selection</string>
+    <string name="cd_delete_selected">Delete selected notes</string>
+    <string name="cd_note_unsynced">Unsynchronized note</string>
+    <string name="sync_status_synced">All notes synchronized</string>
+    <string name="sync_status_syncing">Synchronizing...</string>
+
+    <!-- Note Edit Screen -->
+    <string name="note_new_title">New Note</string>
+    <string name="note_edit_title">Edit Note</string>
+    <string name="note_title_placeholder">Note Title</string>
+    <string name="note_content_placeholder">Type your note content here...</string>
+    <string name="note_unsaved_dialog_title">Save Changes?</string>
+    <string name="note_unsaved_dialog_message">You have unsaved changes. Would you like to save them before leaving?</string>
+    <string name="cd_save_note">Save note</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_section_cloud">Cloud Synchronization</string>
+    <string name="settings_user_logged_in">Logged in</string>
+    <string name="settings_user_not_logged_in">Not signed in</string>
+    <string name="settings_status_connected">Status: Connected to Cloud</string>
+    <string name="settings_status_disconnected">Sign in to sync your notes</string>
+    <string name="settings_last_sync">Last synced: %1$s</string>
+    <string name="settings_sync_just_now">Just now</string>
+    <string name="settings_btn_sync_now">Sync Now</string>
+    <string name="settings_btn_sign_in">Sign In</string>
+    <string name="settings_btn_sign_out">Sign Out</string>
+    <string name="settings_section_preferences">Application Preferences</string>
+    <string name="settings_auto_sync_title">Auto-sync when online</string>
+    <string name="settings_auto_sync_subtitle">Automatically backup notes when internet connection is available</string>
+    <string name="settings_language_title">Application Language</string>
+    <string name="settings_language_subtitle">Choose display language</string>
+    <string name="language_en">English</string>
+    <string name="language_vi">Tiếng Việt</string>
+    <string name="dialog_select_language">Select Language</string>
+    <string name="settings_section_system">System</string>
+    <string name="settings_about_app">About Application</string>
+    <string name="settings_about_app_subtitle">Application information and version changelog</string>
+
+    <!-- About Screen -->
+    <string name="about_title">About Application</string>
+    <string name="about_app_name">AnhPan Note</string>
+    <string name="about_app_version">Version 1.0.0</string>
+    <string name="about_changelog_title">Changelog</string>
+    <string name="about_changelog_v100_title">Version 1.0.0 - Official Release</string>
+
+    <!-- Authentication Dialog -->
+    <string name="auth_dialog_title">Cloud Account</string>
+    <string name="auth_dialog_subtitle">Sign in to synchronize your notes safely across all devices.</string>
+    <string name="auth_tab_sign_in">Sign In</string>
+    <string name="auth_tab_sign_up">Sign Up</string>
+    <string name="auth_email_label">Email</string>
+    <string name="auth_email_placeholder">your.email@example.com</string>
+    <string name="auth_password_label">Password</string>
+    <string name="auth_password_placeholder">At least 6 characters</string>
+    <string name="auth_btn_submit_sign_in">Sign In</string>
+    <string name="auth_btn_submit_sign_up">Create Account</string>
+    <string name="auth_btn_later">Continue Offline</string>
+    <string name="auth_error_empty">Please enter both email and password.</string>
+    <string name="auth_error_short_password">Password must be at least 6 characters long.</string>
+    <string name="auth_error_failed">Authentication failed. Please check your network and credentials.</string>
+    <string name="auth_prompt_sign_in_to_sync">Please sign in to synchronize notes with the cloud.</string>
+</resources>
